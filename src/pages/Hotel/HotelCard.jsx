@@ -1,8 +1,15 @@
 import React, { useState } from "react";
 import Avatar from "../../assets/Avatar.svg";
+import { useNavigate } from "react-router-dom";
 
 const HotelCard = ({ data, setBook, setHotelId }) => {
   const [url] = useState(import.meta.env.VITE_API_URL);
+  
+  const navigate = useNavigate();
+
+  const viewBooking = (id) => {
+    navigate("/admin/booking", { state: { id } });
+  }
   return (
     <div className="bg-black border border-white p-3  text-orange rounded-lg w-auto sm:w-80 ">
       <div className="flex items-center justify-around">
@@ -55,8 +62,9 @@ const HotelCard = ({ data, setBook, setHotelId }) => {
             );
           })}
         </div>
+        <div className="flex gap-x-2">
         <button
-          className="text-orange bg-black border border-white w-full "
+          className="text-orange bg-black border border-white w-full text-14"
           onClick={() => {
             setBook(true);
             setHotelId(data.id);
@@ -64,6 +72,15 @@ const HotelCard = ({ data, setBook, setHotelId }) => {
         >
           Book Room
         </button>
+            <button
+              className="text-white bg-orange border border-white w-full text-14"
+              onClick={() => {
+                viewBooking(data.id);
+              }}
+            >
+              View Booking
+            </button>
+        </div>
       </div>
     </div>
   );

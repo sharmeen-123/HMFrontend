@@ -9,7 +9,7 @@ export function InputDefault({ value, setValue, inputRef, handleKeyDown, nextRef
     <input
       ref={inputRef}
       value={value}
-      className={`border border-blue3 bg-${bg} focus:outline-none rounded-md ${py && 'h-16 placeholder-text-start'} p-1 sm:p-2 px-2 w-full font-Nunitoo placeholder-blue2 text-14 placeholder-text-14'}`}
+      className={`border border-blue3 text-black bg-${bg} focus:outline-none rounded-md ${py && 'h-16 placeholder-text-start'} p-1 sm:p-2 px-2 w-full font-Nunitoo placeholder-blue2 text-14 placeholder-text-14'}`}
       placeholder={Placeholder}
       onChange={handleChange}
       onKeyDown={(e) => handleKeyDown(e, nextRef)}

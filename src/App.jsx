@@ -15,6 +15,7 @@ import SmallSidebar from "./components/bars/SmallSidebar";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import User from "./pages/users/user";
 import Store from "./pages/Hotel/Hotel";
+import Booking from "./pages/Hotel/booking";
 import Settings from "./pages/Settings/Settings";
 
 export const AuthContext = React.createContext();
@@ -104,6 +105,7 @@ function App() {
           <Route path="/admin" element={Outlet(<Dashboard />)} />
           <Route path="/admin/user" element={Outlet(<User />)} />
           <Route path="/admin/hotel" element={Outlet(<Store />)} />
+          <Route path="/admin/booking" element={Outlet(<Booking />)} />
           <Route path="/admin/settings" element={Outlet(<Settings />)} />
         </Routes>
       </AuthContext.Provider>
