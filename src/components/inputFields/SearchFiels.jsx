@@ -21,7 +21,11 @@ const SearchFiels = ({
             console.log("search item re", res.data.data.user);
           } else if (search == "hotel") {
             setData(res.data.data.hotel);
-            console.log("search item re", res.data.data.hotel);
+            console.log("search item are", res.data.data.hotel);
+          }
+          else if (search == "hotel/booking") {
+            setData(res.data.data.bookings);
+            console.log("search item are", res.data.data.bookings);
           }
         })
         .catch((err) => {

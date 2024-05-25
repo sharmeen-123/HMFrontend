@@ -25,13 +25,11 @@ const User = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    console.log("in useState");
     const getUsers = async () => {
       await axios
         .get("/user/getUsers")
         .then((res) => {
           setData(res.data.data.user);
-          console.log("data is", res.data.data.user);
         })
         .catch((err) => {
           // //   setCategoryapi(true)

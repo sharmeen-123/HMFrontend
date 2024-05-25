@@ -5,8 +5,8 @@ import axios from '../axios'
 import {useNavigate } from "react-router-dom";
 
 const Login = () => {
-  const [email, setEmail] = useState("");
-  const [pass, setPass] = useState("");
+  const [email, setEmail] = useState("admin@admin.com");
+  const [pass, setPass] = useState("12345678");
   const [error, setError] = useState(false)
   const emailInputRef = useRef(null);
   const passwordInputRef = useRef(null);
@@ -18,7 +18,7 @@ const Login = () => {
         nextRef.current.focus();
       } else {
         // If there is no next field, submit the form
-        // login();
+        // login(); 
       }
     }
   };

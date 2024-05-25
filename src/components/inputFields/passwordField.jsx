@@ -16,7 +16,7 @@ const PasswordField = ({
       <div className="relative">
         <input
           ref={inputRef}
-          className={`border border-blue3 bg-${bg} focus:outline-none rounded-md p-1 sm:p-2 px-2 w-full font-Nunitoo placeholder-blue2 text-14 placeholder-text-14`}
+          className={`border text-black border-blue3 bg-${bg} focus:outline-none rounded-md p-1 sm:p-2 px-2 w-full font-Nunitoo placeholder-blue2 text-14 placeholder-text-14`}
      type={showPass ? "text" : "password"}
           placeholder={Placeholder}
           onChange={(e) => setValue(e.target.value)}
